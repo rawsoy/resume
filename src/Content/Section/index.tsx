@@ -14,7 +14,7 @@ const TitleContainer = styled.div`
 `;
 
 const Text = styled.span`
-	font-size: 24px;
+	font-size: 2rem;
 	font-weight: bold;
 `;
 

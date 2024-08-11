@@ -5,10 +5,10 @@ import { ContactInfo } from '../../../types/contact';
 const Container = styled.a`
 	display: flex;
 	align-items: center;
-	justify-content: center;
-	gap: 4px;
+	gap: 8px;
 	text-decoration: none;
 	color: black;
+	padding: 0 8px;
 `;
 
 const IconContainer = styled.div`
@@ -18,7 +18,8 @@ const IconContainer = styled.div`
 `;
 
 const Text = styled.span`
-	font-size: 14px;
+	font-size: 1.4rem;
+	white-space: nowrap;
 `;
 
 type Props = {

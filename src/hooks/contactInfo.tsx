@@ -9,7 +9,7 @@ export const useContactCards = (): ContactInfo[] => {
 		},
 		{ icon: <img src='/assets/github.png' />, text: 'rawsoy', link: 'http://www.github.com/rawsoy' },
 		{ icon: <img src='/assets/linkedin.png' />, text: '@yonirawson', link: 'http://www.linkedin.com/in/yrawson' },
-		{ icon: <img src='/assets/phone.png' />, link: 'tel:053 847 0031', text: '053 847 0031' },
+		{ icon: <img src='/assets/phone.png' />, link: 'tel:053 847 0031', text: '(053) 847-0031' },
 	];
 
 	return cards;

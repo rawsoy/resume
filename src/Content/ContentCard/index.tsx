@@ -28,12 +28,12 @@ const TitlesContainer = styled.div`
 `;
 
 const TitleText = styled.span`
-	font-size: 14px;
+	font-size: 1.4rem;
 	white-space: nowrap;
 `;
 
 const Bullet = styled.li`
-	font-size: 12px;
+	font-size: 1.2rem;
 `;
 
 type Props = {

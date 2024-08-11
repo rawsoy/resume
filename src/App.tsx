@@ -8,6 +8,7 @@ const Container = styled.div`
 	flex: 1;
 	padding: 24px;
 	font-family: Arial, Helvetica, sans-serif;
+	gap: 24px;
 `;
 
 const App = () => {

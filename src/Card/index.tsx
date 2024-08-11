@@ -6,7 +6,7 @@ const Container = styled.div<{ fit: boolean }>`
 	flex-direction: column;
 	padding: 4px;
 	box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.1);
-	border-radius: 4px;
+	border-radius: 6px;
 	flex: ${props => (props.fit ? 'unset' : 1)};
 `;
 

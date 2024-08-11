@@ -18,6 +18,13 @@ export const useExperienceCards = (): ContentCardData[] => {
 			iconPath: '/assets/mdi.png',
 			titles: ['Head of Front End Development', 'Full Stack Team Lead', 'Full Stack Developer'],
 			duration: 'Nov 2020 - Present',
+			bullets: [
+				'Led a team of full stack developers and QA.',
+				'Managed the daily workflow of the team to ensure timely delivery of features.',
+				'Developed two full stack applications from scratch, along with maintaining and seperating a complex backend into multiple services.',
+				'Aided the Product and UI teams in designing and implementing an optimized user experience.',
+				'Built with ReactJS, NodeJS, Express, PostgreSQL, AWS.',
+			],
 		},
 		{
 			iconPath: '/assets/hillel.png',
@@ -41,7 +48,7 @@ export const useExperienceCards = (): ContentCardData[] => {
 		},
 		{
 			iconPath: '/assets/insights.png',
-			titles: ['Intern'],
+			titles: ['QA Automations Intern'],
 			duration: 'Dec 2017 - Feb 2018',
 			bullets: [
 				'Created automated solution for quality assurance using Selenium and Python to click through the company’s website, comment on threads and manage workflow. Unit tests run checks in the background while also allowing a QA member to watch the visual elements of the website.',

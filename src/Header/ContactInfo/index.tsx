@@ -6,6 +6,7 @@ const Container = styled.div`
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	gap: 4px;
+	width: 100%;
 `;
 
 const ContactInfo = () => {
