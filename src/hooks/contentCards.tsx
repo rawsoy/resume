@@ -19,9 +19,9 @@ export const useExperienceCards = (): ContentCardData[] => {
 			titles: ['Head of Front End Development', 'Full Stack Team Lead', 'Full Stack Developer'],
 			duration: 'Nov 2020 - Present',
 			bullets: [
-				'Led a team of full stack developers and QA.',
-				'Managed the daily workflow of the team to ensure timely delivery of features.',
-				'Developed two full stack applications from scratch, along with maintaining and seperating a complex backend into multiple services.',
+				'Led a team of Full Stack Developers and QA, fostered a collaborative environment, career growth and skill development.',
+				'Managed the daily workflow of the team to ensure timely and quality delivery of features.',
+				'Developed two full stack applications from scratch. Maintained and split a complex backend into multiple services.',
 				'Aided the Product and UI teams in designing and implementing an optimized user experience.',
 				'Built with ReactJS, NodeJS, Express, PostgreSQL, AWS.',
 			],
