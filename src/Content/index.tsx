@@ -6,7 +6,7 @@ import Projects from './Projects';
 const Container = styled.div`
 	display: flex;
 	flex-direction: column;
-	gap: 16px;
+	gap: 36px;
 `;
 
 const Content = () => {

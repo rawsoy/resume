@@ -18,7 +18,7 @@ const IconContainer = styled.div`
 `;
 
 const Text = styled.span`
-	font-size: 1.4rem;
+	font-size: 1.3rem;
 	white-space: nowrap;
 `;
 

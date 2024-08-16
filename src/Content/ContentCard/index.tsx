@@ -8,12 +8,18 @@ const Container = styled.div`
 	display: flex;
 	flex-direction: column;
 	padding: 8px;
-	gap: 8px;
 `;
 
-const TopContainer = styled.div`
+const ContentContainer = styled.div`
 	display: flex;
-	justify-content: space-between;
+	flex-direction: column;
+	flex-grow: 1;
+`;
+
+const TitleRow = styled.div`
+	display: flex;
+	align-items: center;
+	gap: 8px;
 `;
 
 const IconContainer = styled.div`
@@ -25,15 +31,24 @@ const IconContainer = styled.div`
 const TitlesContainer = styled.div`
 	display: flex;
 	gap: 4px;
+	margin-right: auto;
 `;
 
 const TitleText = styled.span`
 	font-size: 1.4rem;
 	white-space: nowrap;
+	font-weight: bold;
+`;
+
+const BulletsContainer = styled.ul`
+	display: flex;
+	flex-direction: column;
+	gap: 4px;
+	padding-left: 20px;
 `;
 
 const Bullet = styled.li`
-	font-size: 1.2rem;
+	font-size: 1.3rem;
 `;
 
 type Props = {
@@ -41,30 +56,34 @@ type Props = {
 };
 
 const ContentCard = ({ contentCardData }: Props) => {
-	const { iconPath } = contentCardData;
+	const { iconPath, duration, titles, bullets } = contentCardData;
 
 	return (
 		<Card>
 			<Container>
-				<TopContainer>
+				<TitleRow>
 					<IconContainer>
 						<img src={iconPath} />
 					</IconContainer>
 
-					<DurationTag text={contentCardData.duration} />
-				</TopContainer>
+					<TitlesContainer>
+						{titles?.map((title, idx) => (
+							<TitleText key={title}>
+								{idx !== 0 && getHTMLBullet()} {title}
+							</TitleText>
+						))}
+					</TitlesContainer>
 
-				<TitlesContainer>
-					{contentCardData.titles?.map((title, idx) => (
-						<TitleText key={title}>
-							{idx !== 0 && getHTMLBullet()} {title}
-						</TitleText>
-					))}
-				</TitlesContainer>
+					<DurationTag text={duration} />
+				</TitleRow>
 
-				{contentCardData.bullets?.map(bullet => (
-					<Bullet key={bullet}>{bullet}</Bullet>
-				))}
+				<ContentContainer>
+					<BulletsContainer>
+						{bullets?.map(bullet => (
+							<Bullet key={bullet}>{bullet}</Bullet>
+						))}
+					</BulletsContainer>
+				</ContentContainer>
 			</Container>
 		</Card>
 	);
