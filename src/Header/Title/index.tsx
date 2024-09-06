@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import JobTitle from './JobTitle';
 
 const Container = styled.div`
 	display: flex;
@@ -13,16 +14,11 @@ const Name = styled.span`
 	text-align: center;
 `;
 
-const JobTitle = styled.span`
-	font-size: 1.6rem;
-	text-align: center;
-`;
-
 const Title = () => {
 	return (
 		<Container>
 			<Name>Yoni Rawson</Name>
-			<JobTitle>Senior Full Stack Developer</JobTitle>
+			<JobTitle />
 		</Container>
 	);
 };

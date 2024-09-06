@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 import Card from '../../Card';
 import { ContentCardData } from '../../types/content';
-import { getHTMLBullet } from '../../tools/html';
 import DurationTag from './DurationTag';
 
 const Container = styled.div`
@@ -22,6 +21,13 @@ const IconContainer = styled.div`
 	overflow: hidden;
 `;
 
+const JobContainer = styled.div`
+	display: flex;
+	flex-direction: column;
+	margin: 4px 0;
+	gap: 4px;
+`;
+
 const TitlesContainer = styled.div`
 	display: flex;
 	gap: 4px;
@@ -30,6 +36,7 @@ const TitlesContainer = styled.div`
 const TitleText = styled.span`
 	font-size: 1.4rem;
 	white-space: nowrap;
+	font-weight: bold;
 `;
 
 const Bullet = styled.li`
@@ -54,16 +61,16 @@ const ContentCard = ({ contentCardData }: Props) => {
 					<DurationTag text={contentCardData.duration} />
 				</TopContainer>
 
-				<TitlesContainer>
-					{contentCardData.titles?.map((title, idx) => (
-						<TitleText key={title}>
-							{idx !== 0 && getHTMLBullet()} {title}
-						</TitleText>
-					))}
-				</TitlesContainer>
+				{contentCardData.jobs?.map(job => (
+					<JobContainer key={job.title}>
+						<TitlesContainer>
+							<TitleText>{job.title}</TitleText>
+						</TitlesContainer>
 
-				{contentCardData.bullets?.map(bullet => (
-					<Bullet key={bullet}>{bullet}</Bullet>
+						{job.bullets?.map(bullet => (
+							<Bullet key={bullet}>{bullet}</Bullet>
+						))}
+					</JobContainer>
 				))}
 			</Container>
 		</Card>
