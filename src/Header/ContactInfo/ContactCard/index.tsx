@@ -9,6 +9,7 @@ const Container = styled.a`
 	text-decoration: none;
 	color: black;
 	padding: 0 8px;
+	height: 100%;
 `;
 
 const IconContainer = styled.div`
@@ -19,6 +20,7 @@ const IconContainer = styled.div`
 
 const Text = styled.span`
 	font-size: 1.4rem;
+	line-height: 1;
 	white-space: nowrap;
 `;
 

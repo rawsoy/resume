@@ -63,9 +63,11 @@ const ContentCard = ({ contentCardData }: Props) => {
 
 				{contentCardData.jobs?.map(job => (
 					<JobContainer key={job.title}>
-						<TitlesContainer>
-							<TitleText>{job.title}</TitleText>
-						</TitlesContainer>
+						{job.title && (
+							<TitlesContainer>
+								<TitleText>{job.title}</TitleText>
+							</TitlesContainer>
+						)}
 
 						{job.bullets?.map(bullet => (
 							<Bullet key={bullet}>{bullet}</Bullet>

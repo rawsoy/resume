@@ -1,10 +1,11 @@
+import { getHTMLBullet } from '../tools/html';
 import { ContentCardData } from '../types/content';
 
 export const useEducationCards = (): ContentCardData[] => {
 	const cards: ContentCardData[] = [
 		{
 			iconPath: '/assets/umd.png',
-			jobs: [{ title: 'B.S Computer Science, Focus in Data Science' }],
+			jobs: [{ title: `B.S Computer Science ${getHTMLBullet()} Focus in Data Science` }],
 			duration: 'Graduated Dec 2019',
 		},
 	];
@@ -21,20 +22,27 @@ export const useExperienceCards = (): ContentCardData[] => {
 				{
 					title: 'Head of Front End Development',
 					bullets: [
-						'Led a team of full stack developers and QA.',
-						'Managed the daily workflow of the team to ensure timely delivery of features.',
-						'Developed two full stack applications from scratch, along with maintaining and seperating a complex backend into multiple services.',
 						'Aided the Product and UI teams in designing and implementing an optimized user experience.',
-						'Built with ReactJS, NodeJS, Express, PostgreSQL, AWS.',
+						'Refactored the Front End, adding custom hooks, TypeScript, Zod, React Query and more.',
+						'Managed a reusable component library that was accessible and easy for our backend focused developers to use.',
 					],
 				},
 				{
 					title: 'Full Stack Team Lead',
-					bullets: ['hey there esti'],
+					bullets: [
+						'Led a team of three full stack developers and QA.',
+						'Managed the daily workflow of the team to ensure timely delivery of features.',
+						'Worked with the team to make the product more scaleable, optimize performance and improve code quality, reducing algorithm time from twenty seconds to less than five.',
+						"Improved my team's skills through code reviews, pair programming and mentorship.",
+					],
 				},
 				{
 					title: 'Full Stack Developer',
-					bullets: ['its me yoni'],
+					bullets: [
+						'Developed two full stack applications from scratch, both front and back ends.',
+						'Maintained and seperated a complex backend into multiple services.',
+						'Built with ReactJS, NodeJS, Express, PostgreSQL, AWS.',
+					],
 				},
 			],
 		},
@@ -43,11 +51,7 @@ export const useExperienceCards = (): ContentCardData[] => {
 			jobs: [
 				{
 					title: 'Freelance Full Stack Developer',
-					bullets: [
-						'Developed POS system to manage students meal plans at the University of Maryland Hillel.',
-						'Creating a site for students to host, plan and attend pot luck meals on campus.',
-						'Built with ReactJS and Firebase',
-					],
+					bullets: ['Developed POS system to manage students meal plans at the University of Maryland Hillel.', 'Built with ReactJS and Firebase'],
 				},
 			],
 			duration: 'July 2020 - Present',
@@ -56,10 +60,9 @@ export const useExperienceCards = (): ContentCardData[] => {
 			iconPath: '/assets/leapfrog.png',
 			jobs: [
 				{
-					title: 'Intern, Developer',
+					title: `Intern ${getHTMLBullet()} Developer`,
 					bullets: [
-						'Implemented Chrome extension with JS/JQuery that automatically compared client and company task assignments and presented tasks in a concise and user-friendly manner for quick review.',
-						"Extension utilized weekly to prepare for the next week's sprint.",
+						'Implemented Chrome extension with JS/JQuery to automatically compar client and company task assignments and present tasks in a concise, user-friendly manner.',
 						'Scripted with Bash and Python to migrate company’s services to Atlassian cloud.',
 					],
 				},
@@ -71,10 +74,7 @@ export const useExperienceCards = (): ContentCardData[] => {
 			jobs: [
 				{
 					title: 'QA Automations Intern',
-					bullets: [
-						'Created automated solution for quality assurance using Selenium and Python to click through the company’s website, comment on threads and manage workflow. Unit tests run checks in the background while also allowing a QA member to watch the visual elements of the website.',
-						'Successfully replaced manual daily checks of the company’s site, saving hours of time.',
-					],
+					bullets: ['Created automated solution for quality assurance using Selenium and Python to fully replace manual quality checks, saving hours of time.'],
 				},
 			],
 			duration: 'Dec 2017 - Feb 2018',
