@@ -1,14 +1,11 @@
 import styled from 'styled-components';
+import Typography from '../../../Typography';
 
 const Container = styled.div`
 	display: flex;
 	border: 1px solid grey;
 	padding: 8px;
 	border-radius: 6px;
-`;
-
-const Text = styled.span`
-	font-size: 1.2rem;
 `;
 
 type Props = {
@@ -18,7 +15,7 @@ type Props = {
 const DurationTag = ({ text }: Props) => {
 	return (
 		<Container>
-			<Text>{text}</Text>
+			<Typography>{text}</Typography>
 		</Container>
 	);
 };

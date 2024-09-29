@@ -1,12 +1,12 @@
-import { useExperienceCards } from '../../hooks/contentCards';
+import { useProjectsCards } from '../../../hooks/contentCards';
 import ContentCard from '../ContentCard';
 import Section from '../Section';
 
-const Experience = () => {
-	const cards = useExperienceCards();
+const Projects = () => {
+	const cards = useProjectsCards();
 
 	return (
-		<Section title='Experience'>
+		<Section title='Projects' direction='row'>
 			{cards.map(card => (
 				<ContentCard key={card.iconPath} contentCardData={card}></ContentCard>
 			))}
@@ -14,4 +14,4 @@ const Experience = () => {
 	);
 };
 
-export default Experience;
+export default Projects;

@@ -1,7 +1,8 @@
 import styled from 'styled-components';
 import Card from '../../Card';
-import { ContentCardData } from '../../types/content';
+import { ContentCardData } from '../../../types/content';
 import DurationTag from './DurationTag';
+import Typography from '../../Typography';
 
 const Container = styled.div`
 	display: flex;
@@ -33,14 +34,8 @@ const TitlesContainer = styled.div`
 	gap: 4px;
 `;
 
-const TitleText = styled.span`
-	font-size: 1.4rem;
-	white-space: nowrap;
-	font-weight: bold;
-`;
-
 const Bullet = styled.li`
-	font-size: 1.2rem;
+	font-size: 1.1rem;
 `;
 
 type Props = {
@@ -65,7 +60,9 @@ const ContentCard = ({ contentCardData }: Props) => {
 					<JobContainer key={job.title}>
 						{job.title && (
 							<TitlesContainer>
-								<TitleText>{job.title}</TitleText>
+								<Typography variant='h3' weight='bold'>
+									{job.title}
+								</Typography>
 							</TitlesContainer>
 						)}
 

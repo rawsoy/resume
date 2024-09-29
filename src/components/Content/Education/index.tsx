@@ -1,12 +1,12 @@
-import { useProjectsCards } from '../../hooks/contentCards';
+import { useEducationCards } from '../../../hooks/contentCards';
 import ContentCard from '../ContentCard';
 import Section from '../Section';
 
-const Projects = () => {
-	const cards = useProjectsCards();
+const Education = () => {
+	const cards = useEducationCards();
 
 	return (
-		<Section title='Projects' direction='row'>
+		<Section title='Education'>
 			{cards.map(card => (
 				<ContentCard key={card.iconPath} contentCardData={card}></ContentCard>
 			))}
@@ -14,4 +14,4 @@ const Projects = () => {
 	);
 };
 
-export default Projects;
+export default Education;

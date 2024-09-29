@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import JobTitle from './JobTitle';
+import Typography from '../../Typography';
 
 const Container = styled.div`
 	display: flex;
@@ -8,16 +9,16 @@ const Container = styled.div`
 	justify-content: center;
 `;
 
-const Name = styled.span`
-	font-size: 3.2rem;
-	font-weight: bold;
+const Name = styled(Typography)`
 	text-align: center;
 `;
 
 const Title = () => {
 	return (
 		<Container>
-			<Name>Yoni Rawson</Name>
+			<Name variant='h1' weight='bold'>
+				Yoni Rawson
+			</Name>
 			<JobTitle />
 		</Container>
 	);

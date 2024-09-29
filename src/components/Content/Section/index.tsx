@@ -1,5 +1,6 @@
 import { ReactNode } from 'react';
 import styled from 'styled-components';
+import Typography from '../../Typography';
 
 const Container = styled.div`
 	display: flex;
@@ -11,11 +12,6 @@ const Container = styled.div`
 const TitleContainer = styled.div`
 	display: flex;
 	margin-bottom: 12px;
-`;
-
-const Text = styled.span`
-	font-size: 2rem;
-	font-weight: bold;
 `;
 
 const CardsContainer = styled.div<{ direction: Props['direction'] }>`
@@ -34,7 +30,9 @@ const Section = ({ title, children, direction = 'column' }: Props) => {
 	return (
 		<Container>
 			<TitleContainer>
-				<Text>{title}</Text>
+				<Typography variant='h2' weight='bold'>
+					{title}
+				</Typography>
 			</TitleContainer>
 
 			<CardsContainer direction={direction}>{children}</CardsContainer>

@@ -5,7 +5,11 @@ export const useEducationCards = (): ContentCardData[] => {
 	const cards: ContentCardData[] = [
 		{
 			iconPath: '/assets/umd.png',
-			jobs: [{ title: `B.S Computer Science ${getHTMLBullet()} Focus in Data Science` }],
+			jobs: [
+				{
+					title: `B.S Computer Science ${getHTMLBullet()} Focus in Data Science`,
+				},
+			],
 			duration: 'Graduated Dec 2019',
 		},
 	];
@@ -22,26 +26,26 @@ export const useExperienceCards = (): ContentCardData[] => {
 				{
 					title: 'Head of Front End Development',
 					bullets: [
-						'Aided the Product and UI teams in designing and implementing an optimized user experience.',
-						'Refactored the Front End, adding custom hooks, TypeScript, Zod, React Query and more.',
+						'Aided the Product and UI teams in designing a streamlined design library.',
+						'Refactored the Front End, adding custom hooks, fully typed components, Zod, React Query and more.',
 						'Managed a reusable component library that was accessible and easy for our backend focused developers to use.',
 					],
 				},
 				{
 					title: 'Full Stack Team Lead',
 					bullets: [
-						'Led a team of three full stack developers and QA.',
+						'Led a team of three full stack developers and managed the QA department.',
 						'Managed the daily workflow of the team to ensure timely delivery of features.',
-						'Worked with the team to make the product more scaleable, optimize performance and improve code quality, reducing algorithm time from twenty seconds to less than five.',
+						'Worked with the team to make the product more scaleable, optimize performance and improve code quality, reducing algorithm time from thirty seconds to less than five.',
 						"Improved my team's skills through code reviews, pair programming and mentorship.",
 					],
 				},
 				{
 					title: 'Full Stack Developer',
 					bullets: [
-						'Developed two full stack applications from scratch, both front and back ends.',
-						'Maintained and seperated a complex backend into multiple services.',
-						'Built with ReactJS, NodeJS, Express, PostgreSQL, AWS.',
+						'Developed two full stack applications from scratch, both front and back ends. Built with ReactJS, NodeJS, Express, PostgreSQL, AWS.',
+						'Worked directly with the UX team to design and implement a custom user experience.',
+						'Split a complex backend into individual servers and services', // THIS NEEDS WORK
 					],
 				},
 			],
@@ -51,7 +55,10 @@ export const useExperienceCards = (): ContentCardData[] => {
 			jobs: [
 				{
 					title: 'Freelance Full Stack Developer',
-					bullets: ['Developed POS system to manage students meal plans at the University of Maryland Hillel.', 'Built with ReactJS and Firebase'],
+					bullets: [
+						'Developed POS system to manage students meal plans at the University of Maryland Hillel.',
+						'Built with ReactJS and Firebase.',
+					],
 				},
 			],
 			duration: 'July 2020 - Present',
@@ -74,7 +81,9 @@ export const useExperienceCards = (): ContentCardData[] => {
 			jobs: [
 				{
 					title: 'QA Automations Intern',
-					bullets: ['Created automated solution for quality assurance using Selenium and Python to fully replace manual quality checks, saving hours of time.'],
+					bullets: [
+						'Created automated solution for quality assurance using Selenium and Python to fully replace manual quality checks, saving hours of time.',
+					],
 				},
 			],
 			duration: 'Dec 2017 - Feb 2018',
@@ -102,7 +111,14 @@ export const useProjectsCards = (): ContentCardData[] => {
 		{
 			iconPath: '/assets/calendar.png',
 			duration: 'Shared on Github',
-			jobs: [{ bullets: ['Developed cross platform desktop application using Electron, NodeJS and Google Calendar API.', 'Deployed on a Raspberry Pi.'] }],
+			jobs: [
+				{
+					bullets: [
+						'Developed cross platform desktop application using Electron, NodeJS and Google Calendar API.',
+						'Deployed on a Raspberry Pi.',
+					],
+				},
+			],
 		},
 	];
 

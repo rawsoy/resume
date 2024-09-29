@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import Card from '../../../Card';
-import { ContactInfo } from '../../../types/contact';
+import { ContactInfo } from '../../../../types/contact';
+import Typography from '../../../Typography';
 
 const Container = styled.a`
 	display: flex;
@@ -14,14 +15,8 @@ const Container = styled.a`
 
 const IconContainer = styled.div`
 	display: flex;
-	height: 20px;
+	height: 15px;
 	overflow: hidden;
-`;
-
-const Text = styled.span`
-	font-size: 1.4rem;
-	line-height: 1;
-	white-space: nowrap;
 `;
 
 type Props = {
@@ -36,7 +31,7 @@ const ContactCard = ({ contactInfo }: Props) => {
 			<Container href={link} target='_blank'>
 				<IconContainer>{icon}</IconContainer>
 
-				<Text>{text}</Text>
+				<Typography variant='paragraph'>{text}</Typography>
 			</Container>
 		</Card>
 	);

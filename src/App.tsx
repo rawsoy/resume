@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import Header from './Header';
-import Content from './Content';
+import Header from './components/Header';
+import Content from './components/Content';
 
 const Container = styled.div`
 	display: flex;

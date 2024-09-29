@@ -13,7 +13,7 @@ const Image = styled.img`
 `;
 
 const Text = styled.span`
-	font-size: 1.6rem;
+	font-size: 1.4rem;
 	text-align: center;
 	position: absolute;
 	color: white;

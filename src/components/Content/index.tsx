@@ -13,8 +13,8 @@ const Content = () => {
 	return (
 		<Container>
 			<Experience />
-			<Education />
 			<Projects />
+			<Education />
 		</Container>
 	);
 };

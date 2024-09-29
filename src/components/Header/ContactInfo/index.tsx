@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import ContactCard from './ContactCard';
-import { useContactCards } from '../../hooks/contactInfo';
+import { useContactCards } from '../../../hooks/contactInfo';
 
 const Container = styled.div`
 	display: grid;
