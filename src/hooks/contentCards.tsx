@@ -102,8 +102,7 @@ export const useProjectsCards = (): ContentCardData[] => {
 				{
 					bullets: [
 						'Optimized scheduling for summer programs using Gale Shapley algorithm.',
-						'Built for web with ReactJS, MySQL and NodeJS.',
-						'Version 1 built with Express, Handlebars and JS/JQuery.',
+						'Built for web with ReactJS, MySQL and NodeJS. Previously with Express, Handlebars and JS/JQuery',
 					],
 				},
 			],
@@ -123,4 +122,20 @@ export const useProjectsCards = (): ContentCardData[] => {
 	];
 
 	return cards;
+};
+
+export const useSkills = () => {
+	const skills = [
+		'ReactJS',
+		'NodeJS',
+		'TypeScript',
+		'NoSQL',
+		'SQL',
+		'Electron',
+		'AWS',
+		'Selenium',
+		'Data Science',
+	];
+
+	return skills;
 };

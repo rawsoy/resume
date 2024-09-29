@@ -8,7 +8,7 @@ const Projects = () => {
 	return (
 		<Section title='Projects' direction='row'>
 			{cards.map(card => (
-				<ContentCard key={card.iconPath} contentCardData={card}></ContentCard>
+				<ContentCard key={card.iconPath} contentCardData={card} />
 			))}
 		</Section>
 	);

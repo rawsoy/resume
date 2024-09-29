@@ -11,13 +11,14 @@ const Container = styled.div`
 
 const TitleContainer = styled.div`
 	display: flex;
-	margin-bottom: 12px;
+	margin-bottom: 8px;
 `;
 
 const CardsContainer = styled.div<{ direction: Props['direction'] }>`
 	display: flex;
 	flex-direction: ${props => props.direction};
-	gap: 8px;
+	gap: 4px;
+	justify-content: space-between;
 `;
 
 type Props = {

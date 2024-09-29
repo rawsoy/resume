@@ -27,11 +27,13 @@ const ContactCard = ({ contactInfo }: Props) => {
 	const { icon, text, link } = contactInfo;
 
 	return (
-		<Card>
+		<Card size='sm'>
 			<Container href={link} target='_blank'>
 				<IconContainer>{icon}</IconContainer>
 
-				<Typography variant='paragraph'>{text}</Typography>
+				<Typography noWrap variant='paragraph'>
+					{text}
+				</Typography>
 			</Container>
 		</Card>
 	);

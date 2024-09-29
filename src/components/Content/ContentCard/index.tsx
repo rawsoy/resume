@@ -4,9 +4,10 @@ import { ContentCardData } from '../../../types/content';
 import DurationTag from './DurationTag';
 import Typography from '../../Typography';
 
-const Container = styled.div`
+const Container = styled.div<{ $isOneLiner?: boolean }>`
 	display: flex;
-	flex-direction: column;
+	flex-direction: ${({ $isOneLiner }) => ($isOneLiner ? 'row' : 'column')};
+	align-items: ${({ $isOneLiner }) => ($isOneLiner ? 'center' : undefined)};
 	padding: 8px;
 	gap: 8px;
 `;
@@ -16,9 +17,9 @@ const TopContainer = styled.div`
 	justify-content: space-between;
 `;
 
-const IconContainer = styled.div`
+const IconContainer = styled.div<{ $isOneLiner?: boolean }>`
 	display: flex;
-	height: 25px;
+	height: ${({ $isOneLiner }) => ($isOneLiner ? '10px' : '20px')};
 	overflow: hidden;
 `;
 
@@ -40,20 +41,21 @@ const Bullet = styled.li`
 
 type Props = {
 	contentCardData: ContentCardData;
+	isOneLiner?: boolean;
 };
 
-const ContentCard = ({ contentCardData }: Props) => {
+const ContentCard = ({ contentCardData, isOneLiner = false }: Props) => {
 	const { iconPath } = contentCardData;
 
 	return (
 		<Card>
-			<Container>
+			<Container $isOneLiner={isOneLiner}>
 				<TopContainer>
-					<IconContainer>
+					<IconContainer $isOneLiner={isOneLiner}>
 						<img src={iconPath} />
 					</IconContainer>
 
-					<DurationTag text={contentCardData.duration} />
+					{!isOneLiner && <DurationTag text={contentCardData.duration} />}
 				</TopContainer>
 
 				{contentCardData.jobs?.map(job => (

@@ -29,26 +29,33 @@ const getFontSize = (variant: Variant) => {
 	return `${number}rem`;
 };
 
-const Text = styled.span<{ $variant: Variant; $weight: Weight }>`
+const Text = styled.span<{
+	$variant: Variant;
+	$weight: Weight;
+	$noWrap?: boolean;
+}>`
 	font-size: ${({ $variant }) => getFontSize($variant)};
 	font-weight: ${({ $weight }) => ($weight === 'medium' ? 400 : 700)};
 	line-height: 1;
+	white-space: ${({ $noWrap }) => ($noWrap ? 'nowrap' : undefined)};
 `;
 
 type Props = {
 	variant?: Variant;
 	children: ReactNode;
 	weight?: Weight;
+	noWrap?: boolean;
 };
 
 const Typography = ({
 	variant = 'paragraph',
 	weight = 'medium',
+	noWrap,
 	children,
 	...rest
 }: Props) => {
 	return (
-		<Text $variant={variant} $weight={weight} {...rest}>
+		<Text $noWrap={noWrap} $variant={variant} $weight={weight} {...rest}>
 			{children}
 		</Text>
 	);

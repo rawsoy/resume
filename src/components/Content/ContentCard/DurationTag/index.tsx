@@ -4,7 +4,7 @@ import Typography from '../../../Typography';
 const Container = styled.div`
 	display: flex;
 	border: 1px solid grey;
-	padding: 8px;
+	padding: 6px;
 	border-radius: 6px;
 `;
 

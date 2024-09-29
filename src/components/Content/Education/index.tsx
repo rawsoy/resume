@@ -8,7 +8,7 @@ const Education = () => {
 	return (
 		<Section title='Education'>
 			{cards.map(card => (
-				<ContentCard key={card.iconPath} contentCardData={card}></ContentCard>
+				<ContentCard key={card.iconPath} contentCardData={card} isOneLiner />
 			))}
 		</Section>
 	);

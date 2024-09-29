@@ -4,8 +4,8 @@ import { useContactCards } from '../../../hooks/contactInfo';
 
 const Container = styled.div`
 	display: grid;
-	grid-template-columns: 1fr 1fr;
-	gap: 4px;
+	grid-template-columns: repeat(2, min-content);
+	gap: 2px;
 	width: 100%;
 `;
 

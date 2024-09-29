@@ -6,17 +6,17 @@ const Container = styled.div`
 	display: flex;
 	flex-direction: column;
 	width: 100%;
-	justify-content: center;
+	/* justify-content: center; */
 `;
 
 const Name = styled(Typography)`
-	text-align: center;
+	/* text-align: center; */
 `;
 
 const Title = () => {
 	return (
 		<Container>
-			<Name variant='h1' weight='bold'>
+			<Name variant='h1' weight='bold' noWrap>
 				Yoni Rawson
 			</Name>
 			<JobTitle />

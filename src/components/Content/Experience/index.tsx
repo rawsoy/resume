@@ -8,7 +8,7 @@ const Experience = () => {
 	return (
 		<Section title='Experience'>
 			{cards.map(card => (
-				<ContentCard key={card.iconPath} contentCardData={card}></ContentCard>
+				<ContentCard key={card.iconPath} contentCardData={card} />
 			))}
 		</Section>
 	);
