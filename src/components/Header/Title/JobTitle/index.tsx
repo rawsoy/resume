@@ -14,7 +14,6 @@ const Image = styled.img`
 
 const Text = styled.span`
 	font-size: 1.4rem;
-	/* text-align: center; */
 	position: absolute;
 	color: white;
 	background: #7c7c7c;
